@@ -1,0 +1,46 @@
+function - Keyword
+createQuote - Identifier
+( - Punctuation
+quote - Identifier
+, - Punctuation
+callback - Identifier
+) - Punctuation
+{ - Punctuation
+var - Keyword
+myQuote - Identifier
+= - Operator
+"Like I always say, " - String Literal
++ - Operator
+quote - Identifier
+; - Punctuation
+callback - Identifier
+( - Punctuation
+myQuote - Identifier
+) - Punctuation
+; - Punctuation
+// 2 - Comment
+} - Punctuation
+function - Keyword
+logQuote - Identifier
+( - Punctuation
+quote - Identifier
+) - Punctuation
+{ - Punctuation
+console - Identifier
+. - Dot Operator
+log - Identifier
+( - Punctuation
+quote - Identifier
+) - Punctuation
+; - Punctuation
+} - Punctuation
+createQuote - Identifier
+( - Punctuation
+"eat your vegetables!" - String Literal
+, - Punctuation
+logQuote - Identifier
+) - Punctuation
+; - Punctuation
+// 1 - Comment
+// Result in console: - Comment
+// Like I always say, eat your vegetables! - Comment

@@ -1,0 +1,13 @@
+# ninja log v5
+662	692	1696168810919379189	JSlexicalAnalizator	89db03744766ba95
+2	662	1696168810886982009	CMakeFiles/JSlexicalAnalizator.dir/main.cpp.o	49491d66353eec82
+0	50	1696174801386487112	build.ninja	35550048dbb1479
+3	501	1696174801891631140	CMakeFiles/JSlexicalAnalizator.dir/automata.cpp.o	9c51167dd0d78cfe
+2	852	1696174802237645687	CMakeFiles/JSlexicalAnalizator.dir/main.cpp.o	49491d66353eec82
+2	308	1696174942357275441	CMakeFiles/JSlexicalAnalizator.dir/automata.cpp.o	9c51167dd0d78cfe
+2	651	1696174942698585038	CMakeFiles/JSlexicalAnalizator.dir/main.cpp.o	49491d66353eec82
+651	681	1696174942732064905	JSlexicalAnalizator	44d95b19c1ac109a
+2	366	1696175024411121640	CMakeFiles/JSlexicalAnalizator.dir/automata.cpp.o	9c51167dd0d78cfe
+367	430	1696175024471893463	JSlexicalAnalizator	44d95b19c1ac109a
+2	591	1696178224757064592	CMakeFiles/JSlexicalAnalizator.dir/automata.cpp.o	9c51167dd0d78cfe
+591	690	1696178224856441328	JSlexicalAnalizator	44d95b19c1ac109a
