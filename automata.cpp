@@ -11,12 +11,16 @@ enum State {
     OPERATOR,
     PUNCTUATION,
     FINAL,
-    ERROR
+    ERROR,
+    IN_STRING,
+    IN_COMMENT
 };
 
 enum Symbol {
     LETTER,
     DIGIT,
+    QUOTE,
+    SLASH,
     WHITESPACE,
     OPERATOR_SYM,
     PUNCTUATION_SYM,
@@ -46,6 +50,10 @@ std::unordered_map<Transition, State> transitionTable = {
         {{START, DIGIT}, NUMERIC_LITERAL},
         {{KEYWORD_OR_IDENTIFIER, LETTER}, KEYWORD_OR_IDENTIFIER},
         {{KEYWORD_OR_IDENTIFIER, DIGIT}, KEYWORD_OR_IDENTIFIER},
+        {{START, QUOTE}, IN_STRING},
+        {{IN_STRING, QUOTE}, FINAL},
+        {{START, SLASH}, IN_COMMENT},
+        {{IN_COMMENT, WHITESPACE}, FINAL},
         {{NUMERIC_LITERAL, DIGIT}, NUMERIC_LITERAL},
         {{KEYWORD_OR_IDENTIFIER, WHITESPACE}, FINAL},
         {{NUMERIC_LITERAL, WHITESPACE}, FINAL},
@@ -58,6 +66,8 @@ std::unordered_map<Transition, State> transitionTable = {
 Symbol getSymbol(char ch) {
     if (std::isalpha(ch)) return LETTER;
     if (std::isdigit(ch)) return DIGIT;
+    if (ch == '"') return QUOTE;
+    if (ch == '/') return SLASH;
     if (std::isspace(ch)) return WHITESPACE;
     if (strchr("+-*/=<>!&|", ch)) return OPERATOR_SYM;
     if (strchr("(){}[];,.", ch)) return PUNCTUATION_SYM;
@@ -84,6 +94,10 @@ void lexAutomataAnalyze(const std::string &jsCode) {
                 std::cout << "Keyword\n";
             } else if (currentState == NUMERIC_LITERAL) {
                 std::cout << "Numeric Literal\n";
+            } else if (currentState == IN_STRING) {
+                std::cout << "String Literal\n";
+            } else if (currentState == IN_COMMENT) {
+                std::cout << "Comment\n";
             } else {
                 std::cout << "Identifier\n";
             }
