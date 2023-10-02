@@ -57,7 +57,6 @@ void lexRegexAnalyze(const std::string &jsCode, std::ofstream &outfile) {
     }
 }
 
-/*
 int main() {
     std::ifstream file("/Users/maksymkhodakov/CLionProjects/JSlexicalAnalizator/input.js");
     if (!file.is_open()) {
@@ -79,4 +78,3 @@ int main() {
 
     return 0;
 }
-*/
