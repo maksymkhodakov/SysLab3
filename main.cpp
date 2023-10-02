@@ -66,7 +66,7 @@ int main() {
 
     std::string jsCode((std::istreambuf_iterator<char>(file)),std::istreambuf_iterator<char>());
 
-    std::ofstream outfile("/Users/maksymkhodakov/CLionProjects/JSlexicalAnalizator/output.txt");  // Change this line to the path where you want to save the output
+    std::ofstream outfile("/Users/maksymkhodakov/CLionProjects/JSlexicalAnalizator/output.txt");
     if (!outfile.is_open()) {
         std::cerr << "Failed to open output file\n";
         return 1;
