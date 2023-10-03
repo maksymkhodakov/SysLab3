@@ -58,19 +58,51 @@ void lexRegexAnalyze(const std::string &jsCode, std::ofstream &outfile) {
 }
 
 int main() {
-    std::ifstream file("/Users/maksymkhodakov/CLionProjects/JSlexicalAnalizator/input.js");
+    int retryLimit = 3;
+    int attempts = 0;
+
+    std::string directory = "/Users/maksymkhodakov/CLionProjects/JSlexicalAnalizator/";
+    std::cout << "Enter a filename: " << std::endl;
+    std::string filename;
+    std::cin >> filename;
+
+    std::ifstream file(directory.append(filename));
+
+    do {
+        if (attempts > 0) {
+            std::cout << "Would you like to retry? (yes/no): ";
+            std::string choice;
+            std::cin >> choice;
+            if (choice != "yes") {
+                std::cerr << "Exiting program.\n";
+                return 1;
+            }
+        }
+
+        std::cout << "Enter a filename: ";
+        std::cin >> filename;
+
+        std::string fullPath = directory + filename;
+        file.open(fullPath);
+
+        if (file.is_open()) {
+            break;
+        }
+
+        std::cerr << "Failed to open file '" << fullPath << "'.\n";
+        std::cerr << "Error: " << std::strerror(errno) << std::endl;
+        attempts++;
+
+    } while (attempts < retryLimit);
+
     if (!file.is_open()) {
-        std::cerr << "Failed to open file\n";
+        std::cerr << "Exceeded maximum retries. Exiting program.\n";
         return 1;
     }
 
     std::string jsCode((std::istreambuf_iterator<char>(file)),std::istreambuf_iterator<char>());
 
     std::ofstream outfile("/Users/maksymkhodakov/CLionProjects/JSlexicalAnalizator/output.txt");
-    if (!outfile.is_open()) {
-        std::cerr << "Failed to open output file\n";
-        return 1;
-    }
 
     lexRegexAnalyze(jsCode, outfile);
 
