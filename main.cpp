@@ -62,11 +62,9 @@ int main() {
     int attempts = 0;
 
     std::string directory = "/Users/maksymkhodakov/CLionProjects/JSlexicalAnalizator/";
-    std::cout << "Enter a filename: " << std::endl;
     std::string filename;
-    std::cin >> filename;
 
-    std::ifstream file(directory.append(filename));
+    std::ifstream file;
 
     do {
         if (attempts > 0) {
