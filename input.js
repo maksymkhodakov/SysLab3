@@ -10,6 +10,10 @@ function logQuote(quote){
 
 createQuote("eat your vegetables!", logQuote); // 1
 
+console.log(£)
+console.log(¤)
+console.log(§)
+
 console.log(0xb1)
 console.log(0xAF)
 console.log(0xaf)

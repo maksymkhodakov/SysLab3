@@ -67,6 +67,27 @@ console - Identifier
 . - Dot Operator
 log - Identifier
 ( - Punctuation
+Â - Unrecognized token
+£ - Unrecognized token
+) - Punctuation
+console - Identifier
+. - Dot Operator
+log - Identifier
+( - Punctuation
+Â - Unrecognized token
+¤ - Unrecognized token
+) - Punctuation
+console - Identifier
+. - Dot Operator
+log - Identifier
+( - Punctuation
+Â - Unrecognized token
+§ - Unrecognized token
+) - Punctuation
+console - Identifier
+. - Dot Operator
+log - Identifier
+( - Punctuation
 0xb1 - Hexadecimal Literal
 ) - Punctuation
 console - Identifier
