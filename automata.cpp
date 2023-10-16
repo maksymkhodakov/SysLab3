@@ -135,7 +135,7 @@ int main() {
     int retryLimit = 3;
     int attempts = 0;
 
-    std::string directory = "/Users/maksymkhodakov/CLionProjects/JSlexicalAnalizator/";
+    std::string directory = "../";
     std::string filename;
 
     std::ifstream file;
