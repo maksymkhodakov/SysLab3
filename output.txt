@@ -9,7 +9,12 @@ callback - Identifier
 const - Identifier
 myQuote - Identifier
 = - Operator
-"Like I always say, " - String Literal
+Ñ - Unrecognized token
+ƒ - Unrecognized token
+Ð - Unrecognized token
+º - Unrecognized token
+Ð - Unrecognized token
+£ - Unrecognized token
 + - Operator
 quote - Identifier
 ; - Punctuation
@@ -33,6 +38,22 @@ log - Identifier
 quote - Identifier
 ) - Punctuation
 ; - Punctuation
+Ð - Unrecognized token
+¸ - Unrecognized token
+Ð - Unrecognized token
+¸ - Unrecognized token
+Ð - Unrecognized token
+° - Unrecognized token
+Ð - Unrecognized token
+¸ - Unrecognized token
+Ð - Unrecognized token
+¼ - Unrecognized token
+. - Dot Operator
+log - Identifier
+( - Punctuation
+quote - Identifier
+) - Punctuation
+; - Punctuation
 } - Punctuation
 createQuote - Identifier
 ( - Punctuation
@@ -46,7 +67,19 @@ console - Identifier
 . - Dot Operator
 log - Identifier
 ( - Punctuation
-0xb1 - Numeric Literal
+0xb1 - Hexadecimal Literal
+) - Punctuation
+console - Identifier
+. - Dot Operator
+log - Identifier
+( - Punctuation
+0xAF - Hexadecimal Literal
+) - Punctuation
+console - Identifier
+. - Dot Operator
+log - Identifier
+( - Punctuation
+0xaf - Hexadecimal Literal
 ) - Punctuation
 console - Identifier
 . - Dot Operator

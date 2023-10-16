@@ -1,15 +1,18 @@
 function createQuote(quote, callback){
-    const myQuote = "Like I always say, " + quote;
+    const myQuote = укУ + quote;
     callback(myQuote); // 2
 }
 
 function logQuote(quote){
     console.log(quote);
+    ииаим.log(quote);
 }
 
 createQuote("eat your vegetables!", logQuote); // 1
 
 console.log(0xb1)
+console.log(0xAF)
+console.log(0xaf)
 console.log(123)
 console.log(123.123)
 
